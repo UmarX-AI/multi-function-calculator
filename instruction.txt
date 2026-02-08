@@ -1,0 +1,3 @@
+This repository contains a console-based calculator system.
+Run the calculator using Python 3.x.
+Author: Muhammad Umar 
