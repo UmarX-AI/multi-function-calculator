@@ -5,7 +5,7 @@
 ## Features
 - Arithmetic Operations (Add, Subtract, Multiply, Divide, Power, Remainder, Square Root, etc.)
 - BMI Calculator (Supports kg/m and lbs/inch)
-- Unit Converters (Length, Weight, Temperature, Data, Speed)
+- Unit Converters (Length, Weight, Temperature, Data, Speed, Number system)
 - Input Validation
 - Time-Based Greetings
 
