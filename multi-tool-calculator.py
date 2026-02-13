@@ -57,30 +57,34 @@ def show_converter_menu():
     print("3. Temperature ")
     print("4. Data Conversion ")
     print("5. Speed Conversion ")
-    print("6. Go back to main menu")
-
+    print("6. Number system ")
+    print("7. Go back to main menu")
     print("----------------------------------")
     choice = (input("    Choose an option: "))
     print("----------------------------------")
     if choice not in ["1","2","3","4","5","6"]:
        print("Invalid choice!! Enter 1-6")
-    else:   
-     if choice == "1":
-        length_converter()
+    else:
+     match choice:  
+       case "1":
+          length_converter()
       
-     elif choice == "2":
+       case "2":
         weight_converter()
-      
-     elif choice == "3":
+       
+       case "3":
         temperature_converter()
         
-     elif choice == "4":
+       case"4":
         data_converter()
      
-     elif choice == "5":
+       case "5":
         speed_converter()
         
-     elif choice == "6":
+       case "6":
+         Number_system()
+ 
+       case"7":
          print("Exiting Conveter.....")
          return
 
@@ -349,9 +353,52 @@ def data_converter():
   else:
       print("Invalid Choice!!!")
 
-
+#========Number system converter
+def Number_system():
+ print(" Number System converter")
+ print("-----------------------------")
+ print("1. Binary to Decimal")
+ print("2. Decimal to Binary")
+ print("3. Decimal to Hexadecimal")
+ print("4. Hexadecimal to Decimal")
+ choice = input("Choose conversion: ")
+ if choice in ["1","2","3","4"]:
+  match choice:
+    case "1":
+       binary = input("Enter Binary number: ")
+       if set(binary) .issubset({"0","1"}):  
+          decimal = int(binary, 2)
+          print(binary, "(binary) =", decimal, "(decimal)")
+       else:
+          print("Invalid Value. Enter Binarey Values")
+    case "2":
+       try: 
+        decimal = int(input("Enter decimal number: "))
+        binary = bin(decimal)[2:]       
+        print(decimal, "(decimal) =", binary, "(binary)")
+       except ValueError:
+          print("Invalid Value. Enter Decimal Values")
+    case "3":
+       try: 
+         decimal = int(input("Enter decimal number: "))
+         hexa = hex(decimal)[2:]
+         print(decimal, "(decimal) =", hexa, "(hexadecimal)")
+       except ValueError:
+         print("Invalid Value. Enter Decimal Values")
+       
+    case "4":
+        hexa = input("Enter hexadecimal number: ")
+        try: 
+          decimal = int(hexa, 16)
+          print(hexa, "(hexadecimal) =", decimal, "(decimal)")
+        except ValueError:
+         print("Invalid Value. Enter Hexadecimal Values")
+ else:
+    print("Invalid choice. Select 1 to 4")
      
 
+
+#====== Welcome Message========= 
 
 print("\n=====",welcome_msg,"=====\n")
 print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
@@ -360,7 +407,7 @@ print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
  
 #============ main program==============
 def main():
-# Welcome with Greeting
+
 
  while True:
    show_main_menu()
