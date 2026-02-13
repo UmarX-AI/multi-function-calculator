@@ -62,8 +62,8 @@ def show_converter_menu():
     print("----------------------------------")
     choice = (input("    Choose an option: "))
     print("----------------------------------")
-    if choice not in ["1","2","3","4","5","6"]:
-       print("Invalid choice!! Enter 1-6")
+    if choice not in ["1","2","3","4","5","6","7"]:
+       print("Invalid choice!! Enter 1-7")
     else:
      match choice:  
        case "1":
@@ -87,7 +87,6 @@ def show_converter_menu():
        case"7":
          print("Exiting Conveter.....")
          return
-
     input("\n Press Enter to Continue...")   
 
 #========bmi menu===============
